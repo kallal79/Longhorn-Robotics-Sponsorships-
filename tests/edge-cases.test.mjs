@@ -376,6 +376,19 @@ test('Validators, tone diagnostics, PII guard, CSV round-trip, and HTML export w
     const activityRows = activityCsv.trim().split('\n');
     assert.equal(activityRows.length, 21); // 1 header + 20 leads
     assert.match(activityRows[1], /1,Sugarwolf Bakery & Coffee Bar/);
+
+    // 26. Longhorn Robotics Sponsorships preset passes mission audit with verified Texas hardware companies
+    const roboPreset = PLAN_PRESETS.find((p) => p.id === 'robotics-sponsors');
+    assert.ok(roboPreset);
+    const roboState = roboPreset.buildState();
+    assert.equal(roboState.leads.length, 20);
+    assert.equal(roboState.leads.filter((l) => l.status === 'top3').length, 3);
+    assert.equal(roboState.leads.filter((l) => l.status === 'cut').length, 6);
+    assert.match(roboState.leads[0].name, /Apptronik/);
+    assert.match(roboState.leads[1].name, /CesiumAstro/);
+    assert.match(roboState.leads[2].name, /Diligent Robotics/);
+    const roboAudit = runMissionReadinessAudit(roboState);
+    assert.equal(roboAudit.every((a) => a.passed), true, 'Expected 8/8 mission audit pass on robotics preset');
   } finally {
     await fs.rm(outDir, { recursive: true, force: true });
   }

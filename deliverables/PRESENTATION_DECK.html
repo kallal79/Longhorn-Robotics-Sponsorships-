@@ -105,6 +105,14 @@
     }
     .btn-primary { background: #0F766E; color: #ffffff; border-color: #0F766E; }
     .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    @media print {
+      body { background: #ffffff !important; padding: 0 !important; }
+      .deck-container { box-shadow: none !important; border-radius: 0 !important; width: 100% !important; max-width: 100% !important; margin: 0 !important; }
+      .deck-header button, .deck-footer, #slide-indicator { display: none !important; }
+      .deck-body { padding: 0 !important; overflow: visible !important; }
+      .slide { display: block !important; page-break-after: always; break-after: page; padding: 24px 0 !important; min-height: 520px; }
+      .slide:last-child { page-break-after: auto; break-after: auto; }
+    }
   </style>
 </head>
 <body>
