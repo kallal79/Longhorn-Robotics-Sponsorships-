@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Test temp profiles & artifacts
+tests/.chrome-qa-profile/
+tests/.tmp-edge/
+tsconfig.tsbuildinfo
+
+# OS & Logs
+Thumbs.db
+.DS_Store
+*.log

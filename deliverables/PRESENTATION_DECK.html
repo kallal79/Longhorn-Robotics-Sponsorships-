@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alder &amp; Code Studio — Executive Presentation Deck</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0f172a;
+      color: #111827;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .deck-container {
+      width: min(94vw, 960px);
+      min-height: 560px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+    .deck-header {
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+    }
+    .slide-badge {
+      background: #0F766E15;
+      color: #0F766E;
+      font-weight: 700;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-family: monospace;
+    }
+    .deck-body {
+      flex: 1;
+      padding: 32px 36px;
+      overflow-y: auto;
+    }
+    .slide { display: none; }
+    .slide.active { display: block; animation: fadeIn 0.2s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #0F766E;
+      margin-bottom: 4px;
+    }
+    h2 { font-size: 24px; margin: 4px 0 16px; letter-spacing: -0.015em; }
+    .hero-box {
+      background: #faf9f6;
+      border: 1px solid #e5e7eb;
+      box-shadow: inset 4px 0 0 #0F766E;
+      padding: 16px 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    @media (max-width: 680px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+    .stat-tile {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 16px;
+      background: #ffffff;
+    }
+    .stat-val { font-size: 22px; font-weight: 800; font-family: monospace; margin-bottom: 4px; }
+    .stat-lbl { font-size: 12.5px; color: #4b5563; }
+    .deck-footer {
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #e5e7eb;
+      background: #f9fafb;
+    }
+    .btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+      color: #111827;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-primary { background: #0F766E; color: #ffffff; border-color: #0F766E; }
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+  <div class="deck-container">
+    <div class="deck-header">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <span class="slide-badge" id="slide-indicator">Slide 1 of 6</span>
+        <strong style="font-size:14px;">Alder &amp; Code Studio — Executive Pitch Deck</strong>
+      </div>
+      <button class="btn" onclick="window.print()">Print / Save PDF</button>
+    </div>
+
+    <div class="deck-body">
+      <!-- Slide 1 -->
+      <div class="slide active" data-index="0">
+        <div class="eyebrow">Slide 1 · Executive Overview</div>
+        <h2>Go-to-Market Strategy</h2>
+        <div class="hero-box">
+          <div style="font-size:12px; font-weight:700; text-transform:uppercase; color:#0F766E; margin-bottom:4px;">
+            The Offer Formula: [What you offer] for [Who]
+          </div>
+          <div style="font-size:19px; font-weight:600; line-height:1.4;">Mobile-ready menu sites and automated catering/order intake for independent specialty coffee shops and neighborhood bakeries in Austin, TX (&lt;50 employees).</div>
+        </div>
+        <div class="grid-3">
+          <div class="stat-tile">
+            <div class="stat-val">20 Leads</div>
+            <div class="stat-lbl">Sourced via Clay Sculptor AI</div>
+          </div>
+          <div class="stat-tile">
+            <div class="stat-val">3 Selected</div>
+            <div class="stat-lbl">Week-1 Top Picks with dated facts</div>
+          </div>
+          <div class="stat-tile">
+            <div class="stat-val">6 Cuts</div>
+            <div class="stat-lbl">Documented closed / chain cuts</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide" data-index="1">
+        <div class="eyebrow">Slide 2 · Segment Selection</div>
+        <h2>Target Customer Segment</h2>
+        <div class="hero-box">
+          <div style="font-size:12px; font-weight:700; text-transform:uppercase; color:#0F766E; margin-bottom:4px;">Selected Segment</div>
+          <div style="font-size:17px; font-weight:700; margin-bottom:6px;">Independent specialty coffee shops &amp; neighborhood bakeries in Austin, TX (&lt;50 employees)</div>
+          <div style="font-size:14px; color:#374151; line-height:1.45;">I'm starting with independent specialty coffee shops and neighborhood bakeries in Austin, TX (&lt;50 employees) because they publish direct catering/events emails on their websites, manage custom pre-orders manually by inbox, and reply fast to short, concrete workflow previews.</div>
+        </div>
+        <div class="grid-2">
+          
+          <div class="stat-tile" style="border-color:#0F766E; background:#faf9f6;">
+            <div style="font-weight:700; font-size:14px;">Independent specialty coffee shops &amp; neighborhood bakeries in Austin, TX (&lt;50 employees) ★ Selected</div>
+            <div style="font-size:12.5px; color:#4b5563; margin-top:4px;">Channel: Public hello@/events@ email, website catering inquiry forms, and local storefront visibility · Speed: High</div>
+          </div>
+          <div class="stat-tile" style="">
+            <div style="font-weight:700; font-size:14px;">Independent dental &amp; physical therapy clinics in Austin, TX (5–40 staff) </div>
+            <div style="font-size:12.5px; color:#4b5563; margin-top:4px;">Channel: Front-desk phone and generic contact forms · Speed: Medium</div>
+          </div>
+          <div class="stat-tile" style="">
+            <div style="font-weight:700; font-size:14px;">Independent Pilates &amp; strength studios in Austin, TX (3–25 staff) </div>
+            <div style="font-size:12.5px; color:#4b5563; margin-top:4px;">Channel: Instagram DMs and studio manager email · Speed: Low</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide" data-index="2">
+        <div class="eyebrow">Slide 3 · Clay Lead Generation</div>
+        <h2>Clay Sculptor AI Query &amp; Filters</h2>
+        <div class="hero-box">
+          <div style="font-size:12px; font-weight:700; text-transform:uppercase; color:#0F766E; margin-bottom:4px;">Sculptor Prompt</div>
+          <code style="display:block; font-size:14.5px; font-weight:600; font-family:monospace; white-space:normal; word-break:break-word;">“independent specialty coffee shops and neighborhood bakeries in Austin, Texas with fewer than 50 employees that have a website or online ordering”</code>
+        </div>
+        <div class="grid-2">
+          <div class="stat-tile">
+            <div style="font-size:12px; font-weight:700; text-transform:uppercase; color:#6b7280;">Standard Filters</div>
+            <div style="font-size:13.5px; margin-top:6px;">
+              <strong>Location:</strong> Austin, Texas, United States (city limits; exclude Dripping Springs / Round Rock suburbs)<br/>
+              <strong>Headcount:</strong> 1–10 and 11–50 employees
+            </div>
+          </div>
+          <div class="stat-tile">
+            <div style="font-size:12px; font-weight:700; text-transform:uppercase; color:#6b7280;">Industry Neighbors &amp; Exclusions</div>
+            <div style="font-size:13.5px; margin-top:6px;">
+              <strong>Neighbors:</strong> Food and Beverage Services, Restaurants, Retail, Food Production<br/>
+              <strong>Exclusions:</strong> Starbucks, Dutch Bros, Peet’s Coffee, Panera Bread, Dunkin’, Permanently Closed
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide" data-index="3">
+        <div class="eyebrow">Slide 4 · Top Candidates</div>
+        <h2>Top 3 Candidates &amp; Dated Facts</h2>
+        <div style="display:flex; flex-direction:column; gap:12px; margin-top:12px;">
+          
+          <div class="stat-tile">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <strong style="font-size:15px;">#1 Sugarwolf Bakery &amp; Coffee Bar (sugarwolfbakery.com)</strong>
+              <span class="slide-badge">May 5, 2026</span>
+            </div>
+            <div style="font-size:13.5px; margin-top:6px; line-height:1.45;">Opened May 5, 2026 in downtown Austin (The Republic) as a seed-oil-free scratch bakery &amp; coffee bar with a no-laptop/no-Wi-Fi policy and 48-hour advance pickup catering.</div>
+            <div style="font-size:12px; margin-top:4px;"><a href="https://austinfoodmagazine.com/sugarwolf-bakery-and-coffee-bar-set-to-open-in-downtown-austin" target="_blank" rel="noreferrer" style="color:#0F766E;">Verify Source URL →</a></div>
+          </div>
+          <div class="stat-tile">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <strong style="font-size:15px;">#2 Rockman Coffee + Bakeshop (rockmanatx.com)</strong>
+              <span class="slide-badge">March 17, 2026</span>
+            </div>
+            <div style="font-size:13.5px; margin-top:6px; line-height:1.45;">Featured in a March 17, 2026 Community Impact report as a proposed West Gate Expansion concession kiosk at Austin-Bergstrom International Airport, following its Oct 2025 1st anniversary.</div>
+            <div style="font-size:12px; margin-top:4px;"><a href="https://communityimpact.com/austin/central-austin/transportation/2026/03/17/expansion-could-bring-desnudo-rockman-austinuts-and-more-to-austin-airport/" target="_blank" rel="noreferrer" style="color:#0F766E;">Verify Source URL →</a></div>
+          </div>
+          <div class="stat-tile">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <strong style="font-size:15px;">#3 Desnudo Coffee (desnudocoffee.com)</strong>
+              <span class="slide-badge">March 17, 2026</span>
+            </div>
+            <div style="font-size:13.5px; margin-top:6px; line-height:1.45;">Named in Community Impact on March 17, 2026 for a proposed Concourse M terminal spot at ABIA after expanding to Frond Plant Shop on South Lamar and winning Best Coffee Shop.</div>
+            <div style="font-size:12px; margin-top:4px;"><a href="https://communityimpact.com/austin/central-austin/transportation/2026/03/17/expansion-could-bring-desnudo-rockman-austinuts-and-more-to-austin-airport/" target="_blank" rel="noreferrer" style="color:#0F766E;">Verify Source URL →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="slide" data-index="4">
+        <div class="eyebrow">Slide 5 · Outreach Studio</div>
+        <h2>Tested Opening Message (&lt;60 Words)</h2>
+        <div class="hero-box">
+          <div style="font-size:12px; font-weight:700; text-transform:uppercase; color:#0F766E; margin-bottom:4px;">
+            To: Sugarwolf Bakery &amp; Coffee Bar (46 words)
+          </div>
+          <blockquote style="margin:0; font-size:15px; font-style:normal; line-height:1.5;">“Loved seeing Sugarwolf open downtown in May—especially the laptop-free, scratch-kitchen focus. Since your catering page requires 48-hour advance pickup orders, would a lightweight automated intake form help your team pre-qualify morning office boxes before emailing back? Happy to send a 2-minute mockup if helpful. — [Your Name]”</blockquote>
+          <div style="margin-top:6px; font-size:12px; color:#4b5563;">Channel: hello@sugarwolfbakery.com &amp; /catering page</div>
+        </div>
+        <div class="stat-tile" style="background:#faf9f6;">
+          <strong>Interactive 2-Minute Prototype:</strong> Ready to deploy upon prospect reply to convert the cold conversation into a booked audit.
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="slide" data-index="5">
+        <div class="eyebrow">Slide 6 · Week-1 Execution</div>
+        <h2>Week-1 Action Assignments &amp; KPI Target</h2>
+        <div class="grid-2" style="margin-bottom:16px;">
+          <div class="stat-tile">
+            <div style="font-size:12px; font-weight:700; text-transform:uppercase; color:#0F766E; margin-bottom:4px;">What I’ll Watch (Signal)</div>
+            <div style="font-size:14px; font-weight:600;">Replies and 15-minute site/intake audit requests per 10 personalized outreach messages sent (Week-1 target: &gt;= 3 replies and 2 mockup requests per 10 messages).</div>
+          </div>
+          <div class="stat-tile">
+            <div style="font-size:12px; font-weight:700; text-transform:uppercase; color:#0F766E; margin-bottom:4px;">Handshake Showcase Spec</div>
+            <div style="font-size:14px; font-weight:600;">1500 × 1000 px Cover Card + 484/500 chars bio</div>
+          </div>
+        </div>
+        <div class="stat-tile">
+          <strong>Week-1 Schedule:</strong> Mon: Clay Sculptor setup &amp; cut verification → Tue: Sugarwolf Bakery &amp; Coffee Bar → Wed: Rockman Coffee + Bakeshop → Thu: Desnudo Coffee → Fri: Log signal &amp; submit Handshake Showcase.
+        </div>
+      </div>
+    </div>
+
+    <div class="deck-footer">
+      <span style="font-size:12px; color:#6b7280;">Use ← and → arrow keys to navigate · 6 slides total</span>
+      <div style="display:flex; gap:8px;">
+        <button class="btn" id="prev-btn" onclick="prevSlide()" disabled>← Previous</button>
+        <button class="btn btn-primary" id="next-btn" onclick="nextSlide()">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+    const total = slides.length;
+    const indicator = document.getElementById('slide-indicator');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    function showSlide(idx) {
+      slides.forEach((s, i) => {
+        s.classList.toggle('active', i === idx);
+      });
+      indicator.textContent = 'Slide ' + (idx + 1) + ' of ' + total;
+      prevBtn.disabled = idx === 0;
+      nextBtn.disabled = idx === total - 1;
+      current = idx;
+    }
+
+    function nextSlide() { if (current < total - 1) showSlide(current + 1); }
+    function prevSlide() { if (current > 0) showSlide(current - 1); }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
+</body>
+</html>
