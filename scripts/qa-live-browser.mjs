@@ -6,8 +6,7 @@ import assert from 'node:assert/strict';
 const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const APP_URL = 'http://127.0.0.1:4173/';
 const USER_DATA_DIR = path.resolve('tests/.chrome-qa-profile');
-const SHOTS_DIR =
-  'C:\\Users\\USER\\.gemini\\antigravity\\brain\\2a84afaa-7f6d-439b-ae06-5799038d9456\\scratch\\qa-shots';
+const SHOTS_DIR = path.resolve('screenshots');
 
 await fs.mkdir(USER_DATA_DIR, { recursive: true });
 await fs.mkdir(SHOTS_DIR, { recursive: true });

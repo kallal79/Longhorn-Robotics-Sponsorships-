@@ -76,6 +76,27 @@ Launches Google Chrome via CDP, tests user interactions across all 6 workspace t
 
 ---
 
+## Visual Tour & UI Screenshots Gallery
+
+| Screen / Feature | High-Resolution UI Preview |
+| :--- | :--- |
+| **Tab 1: One-Page GTM Plan** | ![One-Page Plan](screenshots/01-one-page-plan.png) |
+| **Tab 2: Offer & Segment Comparison Matrix** | ![Segment Matrix](screenshots/02b-segment-matrix.png) |
+| **Tab 3: Clay 20-Lead Mining & Cut Workbench** | ![Clay Leads Workbench](screenshots/03-clay-20-leads.png) |
+| **Tab 4: Top-3 Outreach Studio & Cadence** | ![Top 3 Outreach Studio](screenshots/04-top3-outreach.png) |
+| **Tab 4b: Live Mobile Inbox Simulator** | ![Mobile Inbox Preview](screenshots/04b-mobile-email-preview.png) |
+| **Tab 5: 1500×1000 px 3:2 Showcase Canvas Card** | ![Showcase Card](screenshots/05-showcase-card.png) |
+| **Tab 6: KPI Tracker, Funnel & Economics** | ![Tracker & Funnel](screenshots/06-tracker-audit.png) |
+| **Assigned Operator Execution Checklist** | ![Playbook Checklist](screenshots/06b-playbook-checklist.png) |
+| **2-Minute Client Intake Prototype Demo** | ![Prototype Modal](screenshots/08-prototype-modal.png) |
+| **Universal Deliverables Hub (9 Files)** | ![Deliverables Hub](screenshots/09b-deliverables-hub.png) |
+| **Interactive Executive Presentation Deck** | ![Presentation Deck](screenshots/09-presentation-modal.png) |
+| **Prospect Dossier Inspector** | ![Lead Detail Modal](screenshots/10-lead-detail-modal.png) |
+| **Mobile Responsive Layout (390px Viewport)** | ![Mobile Responsive](screenshots/07-mobile-one-page.png) |
+| **3:2 Handshake Cover Image Deliverable** | ![Cover Image](deliverables/gtm-plan-card-1500x1000.png) |
+
+---
+
 ## Deliverables Inventory (`deliverables/`)
 
 | File | Format | Purpose & Constraints |
